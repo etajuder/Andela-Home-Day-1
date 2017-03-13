@@ -17,5 +17,30 @@ module.exports = {
         }else if(typeof data === "function"){
             return data(true);
         }
+    },
+    getPrimes:function(num){
+        if(typeof num !== 'number'){
+            return 'invalid input';
+        }else if(num === 0){
+            return 'zero supplied as input';
+        }else if(num === 1){
+        return 'not prime';
+        }else if(num < 0){
+            return 'negative value supplied';
+        }else{
+            var prime = [];
+            for(var i = 2; i<= num; i++){
+                var is_prime = true;
+              for(var j = 2; j< i; j++){
+                  if( i % j === 0){
+                      is_prime = false;
+                  }
+              }  
+               if(is_prime){
+                  prime.push(i); 
+               };
+            }
+            return prime;
+        }
     }
 }

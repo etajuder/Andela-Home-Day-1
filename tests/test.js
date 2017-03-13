@@ -84,3 +84,34 @@ describe("Data types tests ", function() {
     });
   });
 });
+
+var getPrimes = require('../app/index').getPrimes;
+describe("Case for arrays", function() {
+
+    it("should return invalid input for `[0, 1, 2]`", function() {
+      expect(getPrimes([0, 1, 2])).toBe('invalid input');
+    });
+
+
+    it("should return invalid input for jude ", function() {
+      expect(getPrimes("jude")).toBe('invalid input');
+    });
+    it("should return invalid input for jude ", function() {
+      expect(getPrimes(-29)).toBe('negative value supplied');
+    });
+
+    
+    it("should return not prime input for 1", function() {
+      expect(getPrimes(1)).toBe('not prime');
+    });
+
+   it("should return [2,3] prime input for 4", function() {
+      expect(getPrimes(4)).toEqual([2,3]);
+    });
+    it("should return [2,3,5,7,11] prime input for 12", function() {
+      expect(getPrimes(12)).toEqual([2,3,5,7,11]);
+    });
+
+
+
+  });
