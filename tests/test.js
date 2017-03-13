@@ -115,3 +115,7 @@ describe("Case for arrays", function() {
 
 
   });
+
+var Media = require('../app/oop.js').Media;
+var Audio = require('../app/oop.js').Audio;
+var Video = require('../app/oop.js').Video;
