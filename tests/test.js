@@ -119,3 +119,29 @@ describe("Case for arrays", function() {
 var Media = require('../app/oop.js').Media;
 var Audio = require('../app/oop.js').Audio;
 var Video = require('../app/oop.js').Video;
+Video.prototype = new Media();
+Audio.prototype = new Media();
+describe("Video Class: Create a video, make it play", function() {
+  
+    it("The Video should be a type of `object`, and an instance of the `Video` class", function() {
+      
+      var cartoon = new Video('Tom and Jerry');
+      expect(typeof cartoon).toEqual(typeof {});
+      expect(cartoon instanceof Video).toBeTruthy();
+    });
+
+     it("The Video title should be called Tom and Jerry and volume should be 23 by default", function() {
+      var cartoon = new Video('Tom and Jerry');
+      expect(cartoon.title).toEqual('Tom and Jerry');
+      expect(cartoon.volume).toEqual(23);
+    });
+
+it("The Audio should be a type of `object`, and an instance of the `Audio` class", function() {
+      
+      var jackson = new Audio('Thriller');
+      expect(typeof jackson).toEqual(typeof {});
+      expect(jackson instanceof Audio).toBeTruthy();
+    });
+
+
+  });

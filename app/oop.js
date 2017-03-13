@@ -39,15 +39,15 @@ this.Pause = function(){
 
 },
 Audio: function(title){
-this.prototype = new Media();
 this.title = title;
-
 },
 
  Video: function(title){
-    this.prototype = new Media();
+    
     this.title = title;
 
-}
+},
+
 
 }
+
