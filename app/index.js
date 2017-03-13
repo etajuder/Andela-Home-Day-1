@@ -30,12 +30,8 @@ module.exports = {
         }else{
             var prime = [];
             for(var i = 2; i<= num; i++){
-                var is_prime = true;
-              for(var j = 2; j< i; j++){
-                  if( i % j === 0){
-                      is_prime = false;
-                  }
-              }  
+                
+           is_prime = !(Array(i + 1).join(1).match(/^1?$|^(11+?)\1+$/));
                if(is_prime){
                   prime.push(i); 
                };
