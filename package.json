@@ -1,0 +1,22 @@
+{
+  "name": "andela-home",
+  "version": "1.0.0",
+  "description": "Solutions to andela home day 1 exercise",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "jasmine tests/test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wapjude/Andela-Home-Day-1.git"
+  },
+  "author": "Etanuwoma Jude",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wapjude/Andela-Home-Day-1/issues"
+  },
+  "homepage": "https://github.com/wapjude/Andela-Home-Day-1#readme",
+  "devDependencies": {
+    "jasmine": "^2.5.3"
+  }
+}
