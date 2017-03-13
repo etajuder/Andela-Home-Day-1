@@ -142,6 +142,21 @@ it("The Audio should be a type of `object`, and an instance of the `Audio` class
       expect(typeof jackson).toEqual(typeof {});
       expect(jackson instanceof Audio).toBeTruthy();
     });
-
+it("The Audio should return 'Playing The return of the Mosco By Micheal Jackson At volume of 83' when the title is The return of the Mosco and Author is Micheal Jackson and volume plus 60 ", function() {
+      
+      var jackson = new Audio('The return of the Mosco');
+      jackson.high(60);
+      jackson.author = "Micheal Jackson";
+      expect(jackson.Play()).toEqual('Playing The return of the Mosco By Micheal Jackson At volume of 83');
+      
+    });
+it("The Video should return 'Playing Andela trick Season 3 By Waleola Akinsami At volume of 13' when the title is The return of the Mosco and Author is Micheal Jackson and volume minus 10 ", function() {
+      
+      var video = new Video('Andela trick Season 3');
+      video.low(10);
+      video.author = "Waleola Akinsami";
+      expect(video.Play()).toEqual('Playing Andela trick Season 3 By Waleola Akinsami At volume of 13');
+      
+    });
 
   });
